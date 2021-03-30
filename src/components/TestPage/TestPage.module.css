@@ -1,0 +1,115 @@
+.answerOption{
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    float: left;
+    padding-left: 20%;
+    animation-name: fade-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fade-in {
+    0% {
+        color: rgba(255, 255, 255, 0);
+        padding-left: 10%
+    }
+
+    100% {
+        color: white;
+        padding-left: 20%;
+    }
+}
+
+.regular:before{
+    content: "▢ ";
+}
+
+.answerOption.right{
+    background-color: rgba(191,255,0,0.5);
+}
+
+.answerOption.right:before {
+    content: "✓ "
+}
+
+.answerOption.wrong{
+    background-color: rgba(255,0,0,0.5);
+}
+.answerOption.wrong:before{
+    content: "✗ "
+}
+
+.appear{
+    transform: rotatez(2deg);
+    animation-name: appear;
+    animation-duration: 0.5s;
+}
+
+.appear:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: calc(50% + 3px);
+    transform: translateX(-50%) rotateZ(-0.5deg);
+    right: 0;
+    bottom: 6px;
+    background: black;
+    box-shadow: 2px 2px 5px 1px black;
+    animation-name: shadow;
+    width: 250px;
+    animation-duration: 0.5s;
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: 30px 10px 40px 0 black;
+        transform:  translateX(-50%)  rotateZ( 0deg );
+    }
+    to{
+        box-shadow: 2px 2px 5px 1px black;
+        transform: translateX(-50%)  rotateZ( -0.5deg );
+    }
+}
+
+@keyframes appear {
+    from {
+        transform: rotatez(-15deg) scale(1.2);
+    }
+    to{
+        transform: rotatez(2deg) scale(1);
+    }
+}
+
+div.blur{
+    -webkit-filter: url(#svg-blur);
+    filter: url(#svg-blur);
+}
+
+
+.results{
+    border-radius: 10px;
+    margin-left: 10px;
+    background: rgba(191,255,0,0.5);
+    color: white;
+    padding: 0 6px 0 6px;
+}
+
+.results:last-of-type{
+    background: rgba(255,0,0,0.5);
+}
+
+.wall{
+    background-color: rgba(50,50,50,0.6);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}

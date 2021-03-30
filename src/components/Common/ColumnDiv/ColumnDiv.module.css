@@ -1,0 +1,14 @@
+.column{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    grid-auto-rows: max-content;
+    text-align: -webkit-center;
+    min-width: 250px;
+}
+/*.column:first-of-type{*/
+/*    border-right: 1px groove silver;*/
+/*    width: 230px;*/
+/*    padding-right: 18px;*/
+/*    margin-right: 10px;*/
+/*}*/

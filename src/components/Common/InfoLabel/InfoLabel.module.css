@@ -1,0 +1,14 @@
+.translation{
+    color: aqua;
+    font-size: 1.1em;
+}
+
+.transcription{
+    color: mediumaquamarine;
+    font-family: cursive;
+}
+
+.word{
+    color: yellow;
+    font-size: 1.3em;
+}

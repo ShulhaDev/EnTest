@@ -1,0 +1,9 @@
+.error{
+    outline: none;
+    box-shadow: -3px 1px 30px 0 rgba(255,50,50,0.4) inset;
+}
+
+.error span {
+    color: white;
+    text-shadow: 1px 2px 5px red;
+}

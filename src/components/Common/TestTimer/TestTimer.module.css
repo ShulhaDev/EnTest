@@ -1,0 +1,32 @@
+.frame{
+    text-align: center;
+    color: midnightblue;
+    font-weight: bolder;
+    border: 6px groove silver;
+    margin: 3px;
+    background: floralwhite;
+    border-radius: 16px;
+}
+
+.clock{
+    width: fit-content;
+    line-height: 40px;
+}
+.clock:before{
+    content: "....";
+    color: transparent;
+    background-size: 55px 55px;
+    background-position: 50%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+
+}
+
+.running:before{
+    background-image: url("./clock.gif");
+}
+
+.stopped:before{
+    background-image: url("./clock.png");
+}

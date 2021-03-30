@@ -1,0 +1,21 @@
+.shadowBox{
+    box-shadow: 8px 0 6px 0 rgba(0,0,0,0.5);
+    transform: translateX(-5px);
+}
+
+.btn{
+    background-image: url('https://image.freepik.com/free-photo/yellow-sponge-texture-background_101296-129.jpg');
+    background-size: 150px;
+    height: 30px;
+    color: black;
+    font-size: 1em;
+    font-family: cursive, serif;
+    box-shadow: -8px 0 6px 0 rgba(0,0,0,0.8) inset;
+    font-weight: bold;
+    padding: 0 20px 0 10px;
+    border-radius: 5px 5px 1px 1px;
+}
+
+.btn:disabled {
+    filter: brightness(0.5);
+}

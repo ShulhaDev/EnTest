@@ -1,0 +1,139 @@
+label {
+  margin: 5px;
+}
+body {
+  background-color: dimgray;
+  font-family: cursive,Sans-serif;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 7px;
+  border: none;
+  box-shadow: -4px -4px 8px 0 black inset;
+  padding-right: 10px;
+}
+
+header {
+  flex: 1;
+  font-size: 1.4em;
+  align-self: center;
+  color:  white;
+  text-shadow: 2px 7px 11px black;
+}
+
+input {
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed white;
+  color: white;
+  font-family: "Chalk", cursive, "serif";
+  font-size: inherit;
+
+  text-shadow: 1px 1px 0 black;
+}
+input:focus, input:active{
+  background-color: rgba(30,30,30,0.4);
+  outline: none;
+}
+
+button:active, button:focus{
+  outline: none;
+  filter: brightness(1.2);
+}
+
+.background{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: seagreen;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 15px;
+  display: flex;
+  align-content: center;
+  box-shadow: 6px 10px 20px -5px black;
+}
+
+fieldset{
+  border-radius: 5px;
+  box-shadow: inset 4px 3px 3px 1px black;
+  background-image: url("https://image.freepik.com/free-photo/school-chalkboard-for-background-copy-space_1249-262.jpg");
+  backdrop-filter: brightness(0.8);
+  background-size: 110%;
+  background-position: 50%;
+  border: 4px groove silver;
+  padding: 20px 10px 0;
+  color: white;
+  font-family: "Chalk",cursive, "serif";
+  overflow: visible;
+}
+
+fieldset.list{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.4em;
+  min-width: 250px;
+}
+
+legend.highlighted{
+  text-shadow: 0 0 20px lime;
+}
+
+.associatedImage{
+  width: 250px;
+  height: auto;
+  text-align: center;
+  border: 3px groove darkseagreen;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+input.wordData {
+  font-family: cursive, serif;
+  box-sizing:border-box;
+  width: 100%
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  box-shadow: -2px -2px 4px 0 inset black;
+  height: 40px;
+}
+
+
+.word{
+  color: yellow;
+}
+.translation {
+  color: aqua;
+}
+
+.transcription{
+  color: mediumaquamarine;
+}
+
+div.formContainer{
+  display: flex;
+  flex-direction: column;
+  font-family: cursive, "serif";
+  margin: 5px auto;
+}

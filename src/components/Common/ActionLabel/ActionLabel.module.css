@@ -1,0 +1,28 @@
+
+.interactive{
+    font-size: 1em;
+    line-height: 45px;
+    animation: toLine ease-in 0.3s;
+    margin-right: 10px;
+}
+
+.interactive:hover{
+    text-shadow: 2px 2px 3px dodgerblue;
+    animation: toFront ease-out 0.3s;
+    font-size: 1.1em;
+}
+
+@keyframes toFront {
+    from {
+        font-size: 1em;
+    }
+    to{
+        font-size: 1.1em;
+    }
+}
+
+@keyframes toLine {
+    to{
+        font-size: 1em;
+    }
+}

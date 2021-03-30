@@ -1,0 +1,13 @@
+.buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.buttons > *{
+    margin: 0 3px;
+}
+
+.buttons > div:last-of-type{
+     margin-left: auto;
+ }

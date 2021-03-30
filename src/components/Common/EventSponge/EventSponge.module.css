@@ -1,0 +1,54 @@
+.major{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.sponge{
+    background-image: url("./../../../media/backgrounds/sponge.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: brightness(0.8);
+    background-position: 50% 50%;
+    max-width: 400px;
+    padding: 20px;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 20px 20px  40px 5px black;
+}
+
+.message{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+.ok{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+.action{
+    margin: 0 10px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: none;
+    border-radius: 10px;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.sponge > label {
+    font-weight: bolder;
+}
