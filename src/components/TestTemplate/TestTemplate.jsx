@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import styles from "./TestTemplate.module.css"
+import styles from "./TestTemplate.module.scss"
 import ActionLabel from "../Common/ActionLabel/ActionLabel";
 import {confirm,info} from "../Common/EventSponge/EventSponge";
 import TestSelectContainer from "../Common/TestSelect/TestSelectContainer";
@@ -28,11 +28,13 @@ const TestTemplate = ({throwSelected,...props}) => {
         if(props.testData.id < 0){
             info('This is generated test, it cannot be modified. Specify another test name');
         }
-        else
-        props.saveTest(Object.assign({},props.testData,{
-            author_id: props.user.id,
-            words_ids: (props.words && props.words.length>0) ? props.words.map(word=>word.id_word): undefined
-        }));
+        else {
+            console.log(props);
+            props.saveTest(Object.assign({}, props.testData, {
+                author_id: props.user.id,
+                words_ids: (props.words && props.words.length > 0) ? props.words.map(word => word.id_word) : undefined
+            }));
+        }
     }
     const removeTest = () => {
         if(props.testData.id > 0){

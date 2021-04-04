@@ -27,7 +27,7 @@ const TopicSelect = ({topicValue,topicList,isSelector,wordDataChanged,fetchTopic
 
     return (
         <>
-            <legend style={{marginTop: "15px"}}>topic:</legend>
+            <legend>topic:</legend>
             <Cleaner cleanerFn={() => {wordDataChanged({key: "topic", value: ''});}}>
                 <input id="topic" list="topicList" className={"wordData"} type="text"
                        value={topicValue}

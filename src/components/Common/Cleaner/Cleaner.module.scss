@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    margin-left: 3px;
+}
+
+.trigger{
+    color: gold;
+    cursor: pointer;
+    vertical-align: center;
+    text-align: center;
+    height: 25px;
+    line-height: 20px;
+    &:hover{
+        animation-name: spin;
+        animation-duration: 0.5s;
+        &:active{
+            color: red;
+        }
+    }
+}
+
+@keyframes spin {
+    from { transform: rotateZ(180deg); }
+    to   { transform: rotateZ(0deg);   }
+}

@@ -6,6 +6,7 @@ import WordsPanelContainer from "../WordsPanel/WordsPanelContainer";
 import WordInfoPanel from "../WordInfoPanel/WordInfoPanel";
 import ColumnDiv from "../Common/ColumnDiv/ColumnDiv";
 import Row from "../Common/Row/Row";
+import styles from './LearnPage.module.scss'
 
 const LearnPage = (props) =>{
     const history = useHistory();
@@ -13,12 +14,10 @@ const LearnPage = (props) =>{
         <div>
             <fieldset>
                 <legend className={'highlighted'}>learn page</legend>
-                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+                <div  className={styles.learnLayout}>
                     <ColumnDiv>
                         <TopicSelectContainer isSelector={true}/>
-                        <div>
-                            <WordsPanelContainer />
-                        </div>
+                        <WordsPanelContainer />
                     </ColumnDiv>
                     <ColumnDiv>
                         <WordInfoPanel data={props.data}/>

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import styles from "./WordsPanel.module.css"
+import styles from "./WordsPanel.module.scss"
 import Row from "../Common/Row/Row";
 import ActionLabel from "../Common/ActionLabel/ActionLabel";
 
@@ -79,23 +79,35 @@ const WordsPanel = ({wordData,searchLineValueChange,selectAllFound,throwAllFound
                                             {word.word}
                                       </SWord>)
         : 'No Words found';
+
+    let first = foundList && foundList.length>0 && foundList[0].word === wordData.word;
+    let last = foundList && foundList.length>0 && foundList[foundList.length-1].word === wordData.word;
     let selectBar = props.multiselect? (
-        <Row>
+        <>
             <ActionLabel onClick={selectAllFound}>All</ActionLabel>
             <ActionLabel onClick={throwAllFound}>Clear</ActionLabel>
             <div>
                 <ActionLabel onClick={confirmTestSet}>Add</ActionLabel>
             </div>
-        </Row>
-    ):'';
+        </>
+    ):(
+        <>
+            <ActionLabel inactive={first} onClick={previousWord}>{"< previous"}</ActionLabel>
+            <div><ActionLabel inactive={last} onClick={nextWord}>{"next >"}</ActionLabel></div>
+        </>
+    );
     return (
+        <>
         <div className={styles.wordList} tabIndex={"1"} onKeyDown={handleKeyDown}>
             <label className={styles.header}>words</label>
             <div className={styles.panel}>
                 {options}
             </div>
-            {selectBar}
         </div>
+            <Row>
+            {selectBar}
+        </Row>
+        </>
     );
 }
 

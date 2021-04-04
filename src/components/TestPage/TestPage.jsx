@@ -1,6 +1,6 @@
 import React, {useState,useEffect,useCallback,useMemo,useRef} from 'react'
 import ColumnDiv from "../Common/ColumnDiv/ColumnDiv";
-import styles from './TestPage.module.css'
+import styles from './TestPage.module.scss'
 import PinnedImage from "../Common/PinnedImage";
 import Row from "../Common/Row/Row";
 import SpongeBtn from "../Common/SpongeBtn/SpongeBtn";
@@ -147,14 +147,14 @@ const TestPage = ({setFromTestSelect, ...props}) => {
     let height = paused ? "100%" : "1px";
     const wall = paused? <div className={styles.wall}/>: '';
     return (
-        <div>
+        <div style={{display: "block"}}>
             <Row>
                 <TestTimer time={5000} connectTime={getTime} connectToggle={storeToggleCb} connectResetter={storeResetCb} onExpired ={() => {registerAnswer(false);}}/>
                 <div>Score: {score}</div>
             </Row>
             <fieldset>
                 <legend>Test: {props.testName}</legend>
-                <div className={ paused ? styles.blur : ""} style={{position: "relative",display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+                <div className={ styles.ticket + ' ' +(paused ? styles.blur : "")} >
                     {wall}
                     <ColumnDiv>
                         <AnimatedPinnedImage src={wordRight && wordRight.image}/>
@@ -162,7 +162,7 @@ const TestPage = ({setFromTestSelect, ...props}) => {
 
                     </ColumnDiv>
                     <ColumnDiv style={{textAlign: "left"}}>
-                        <div style={{display: "flex", flexFlow: "column nowrap", alignContent: "flex-start"}}>
+                        <div style={{display: "flex", flexFlow: "column nowrap", alignContent: "flex-start", width: "100%"}}>
                             {answerOptions}
                         </div>
                     </ColumnDiv>

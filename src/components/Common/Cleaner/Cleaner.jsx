@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Cleaner.module.css'
+import styles from './Cleaner.module.scss'
 
 const Cleaner = props => {
     return (

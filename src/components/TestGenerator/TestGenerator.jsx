@@ -7,13 +7,14 @@ import ColumnDiv from "../Common/ColumnDiv/ColumnDiv";
 import Row from "../Common/Row/Row";
 import TestTemplateContainer from "../TestTemplate/TestTemplateContainer";
 import withAuthorization from "../../HOCs/withAuthorization";
+import styles from './TestGenerator.module.scss'
 
 const TestGenerator = () => {
     let history = useHistory();
     return (
         <fieldset>
             <legend>Create test</legend>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+            <div className={styles.container}>
                 <ColumnDiv>
                     <TopicSelectContainer isSelector={true}/>
                     <WordsPanelContainer multiselect={true}/>

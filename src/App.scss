@@ -1,0 +1,132 @@
+@use 'styles/variables' as vars;
+@use 'styles/extendables';
+label {
+  margin: 5px;
+}
+
+body {
+  background-color: dimgray;
+  font-family: "Chalk", cursive, Sans-serif;
+}
+
+button {
+  border-radius: 7px;
+  border: none;
+  box-shadow: -4px -4px 8px 0 black inset;
+  padding-right: 10px;
+
+  &:active, &:focus {
+    outline: none;
+    filter: brightness(1.2);
+  }
+}
+
+header {
+  flex: 1;
+  font-size: vars.$largerFontSize;
+  align-self: center;
+  color: white;
+  text-shadow: 2px 7px 11px black;
+}
+
+input {
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed white;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  text-shadow: 1px 1px 0 black;
+  min-width: 0;
+  margin-bottom: 10px;
+
+  &:focus, &:active {
+    background-color: rgba(30, 30, 30, 0.4);
+    outline: none;
+  }
+
+  &.wordData {
+    font-family: cursive, serif;
+  }
+}
+
+div {
+  &.background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: seagreen;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    display: flex;
+    align-content: center;
+    box-shadow: 6px 10px 20px -5px black;
+    @extend .flexVane;
+  }
+
+  &.formContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: cursive, "serif";
+    margin: 5px auto;
+  }
+}
+
+fieldset {
+  border-radius: 5px;
+  box-shadow: inset 4px 3px 3px 1px black;
+  background-image: url("https://image.freepik.com/free-photo/school-chalkboard-for-background-copy-space_1249-262.jpg");
+  backdrop-filter: brightness(0.8);
+  background-size: 110%;
+  background-position: 50%;
+  border: 4px groove silver;
+  padding: 10px 10px 0;
+  color: white;
+  font-family: "Chalk", cursive, "serif";
+  overflow: visible;
+
+  &.list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 1.4em;
+    min-width: 250px;
+  }
+}
+
+legend.highlighted {
+  text-shadow: 0 0 20px lime;
+}
+
+.associatedImage {
+  text-align: center;
+  border: 3px groove darkseagreen;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: -2px -2px 4px 0 inset black;
+  height: 40px;
+}
+
+
+.word {
+  color: yellow;
+}
+
+.translation {
+  color: aqua;
+}
+
+.transcription {
+  color: mediumaquamarine;
+}

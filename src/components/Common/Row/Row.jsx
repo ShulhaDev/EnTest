@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Row.module.css";
+import styles from "./Row.module.scss";
 
 const  Row = (props) => <div className={styles.buttons}>{props.children}</div>
 

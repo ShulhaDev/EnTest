@@ -1,0 +1,29 @@
+@use '../../../styles/extendables';
+.swipeLabel{
+    @extend .unselectable;
+    line-height: 45px;
+    margin-right: 10px;
+}
+
+.interactive{
+    animation: toLine ease-in 0.3s;
+    @extend .swipeLabel;
+    &:hover {
+        text-shadow: 2px 2px 3px dodgerblue;
+        animation: toFront ease-out 0.3s;
+        font-size: 1.1em;
+    }
+}
+.inactive{
+    @extend .swipeLabel;
+    color: black;
+}
+
+@keyframes toFront {
+    from { font-size: 1em; }
+    to   { font-size: 1.1em; }
+}
+
+@keyframes toLine {
+    to { font-size: 1em; }
+}

@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import styles from "./SearchLine.module.css"
 import ScrollableDataList from "../Common/ScrollableDataList";
 import Cleaner from "../Common/Cleaner/Cleaner";
 
@@ -24,9 +23,8 @@ const SearchLine = ({foundList,searchLineValue,searchLineValueChange}) => {
         foundList.map(item => <option key={item.word} value={item.word}>{item.word}</option> )
         :'';
     return (
-        // <div style={{display:"flex"}}>
         <Cleaner cleanerFn={() => {searchLineValueChange('')}}>
-            <input className={styles.search}
+            <input className="word"
                    type="text"
                    autoComplete="nope"
                    placeholder="Start typing here..."

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ValidatedField.module.css'
+import styles from './ValidatedField.module.scss'
 import {Field} from "redux-form";
 import {maxLength15, minLength2, valueRequired} from "../../../utils/validators";
 

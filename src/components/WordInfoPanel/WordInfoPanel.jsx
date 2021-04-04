@@ -5,7 +5,7 @@ import InfoLabel from "../Common/InfoLabel/InfoLabel";
 const WordInfoPanel = (props) => {
     const {word,translation,transcription,image} = props.data;
     return(
-        <div style={{display: "grid", gridTemplateColumns: "1fr"}}>
+        <div style={{display: "grid", gridTemplateColumns: "1fr", paddingTop:" 10px" }}>
             <PinnedImage src={image || ''} />
             <InfoLabel sourceType={"word"}>{word || ''}</InfoLabel>
             <InfoLabel sourceType={"transcription"}>{transcription || ''}</InfoLabel>

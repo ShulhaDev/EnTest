@@ -1,0 +1,26 @@
+@use 'variables' as vars;
+
+@mixin ruleForBigger() {
+  img {
+    max-width: 12rem;
+    max-height: 9rem;
+    height: auto;
+    width: auto;
+  }
+  @media screen and (min-width: vars.$tablet-width) {
+    top: 30px;
+    max-width: vars.$tablet-width;
+    font-size: vars.$largerFontSize;
+    flex-flow: row nowrap;
+    img {
+      max-height: fit-content;
+      max-width: 15rem;
+    }
+  }
+}
+ @mixin scaledFont($coeff){
+   font-size: vars.$smallerFontSize * $coeff;
+   @media screen and (min-width: vars.$tablet-width){
+     font-size:  vars.$largerFontSize * $coeff;
+   }
+ }

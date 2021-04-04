@@ -8,7 +8,7 @@ import SpongeBtn from "../Common/SpongeBtn/SpongeBtn";
 import ColumnDiv from "../Common/ColumnDiv/ColumnDiv";
 import Row from "../Common/Row/Row";
 import WordDataField from "../Common/WordDataField";
-import styles from "./VocabularyPage.module.css"
+import styles from "./VocabularyPage.module.scss"
 
 const  VocabularyPage =  ({wordDataChanged,postData,removeWord,foundList,wordData,loggedIn}) => {
     let data = wordData;

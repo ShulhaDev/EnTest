@@ -178,8 +178,10 @@ const vocabularyReducer = (state=initialState,action) => {
                 let ids = (state.tests.find(test => test.id === state.testData.id).words_ids+'').split(',').map(item => +item);
                 confirmed = state.foundList.filter(word => ids && ids.find(id => id === word.id_word));
             }
-            else
+            else {
                 confirmed = [];
+                console.log('empty');
+            }
             return Object.assign({},state,
                 {
                     confirmedForTest: confirmed,
@@ -207,6 +209,7 @@ const vocabularyReducer = (state=initialState,action) => {
             return Object.assign({},state,{tests: undefined,testData: initialState.testData});
         case TEST_SAVED:
             tests = [...state.tests];
+            console.log(action.actual);
             testData = Object.assign({},
                 state.testData,
                 {

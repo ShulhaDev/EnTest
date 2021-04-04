@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useRef} from "react"
-import styles from "./TestTimer.module.css"
+import styles from "./TestTimer.module.scss"
 
 const useInterval = (callback,running,duration) => {
     const doStep = useRef();
@@ -26,7 +26,6 @@ const TestTimer = ({time, connectTime, connectToggle, connectResetter, onExpired
         setTime(prev => {
             let newTime = Math.max(prev - 10,0);
             if(newTime === 0){
-                //setRunning(false);
                 setTimeout(onExpired,0);
             }
             return newTime
@@ -46,7 +45,6 @@ const TestTimer = ({time, connectTime, connectToggle, connectResetter, onExpired
             setRunning(false);
         }
         postTime.current = () => {
-            console.log("timeLeft: ", timeLeft);
             return timeLeft;
         }
     },[time, timeLeft]);
@@ -62,7 +60,7 @@ const TestTimer = ({time, connectTime, connectToggle, connectResetter, onExpired
 
     return (
         <div className={styles.frame}>
-            <label className={styles.clock + " " +  stateClock}>{timeFormatted}</label>
+            <label className={styles.clock + " " +  stateClock}>{" " + timeFormatted}</label>
         </div>
     );
 }

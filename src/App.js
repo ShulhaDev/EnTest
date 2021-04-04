@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import './App.css';
+import './App.scss';
 import {Redirect, Route} from "react-router-dom";
 import LoginPageContainer from "./components/LoginPage/LoginPageContainer";
 import {Switch} from "react-router";

@@ -3,8 +3,8 @@ import styles from './SpongeBtn.module.css'
 
 const SpongeBtn = ({className,children,onClick}) => {
     const action = useCallback(()=>{
-        if(onClick)
-            onClick();
+       if(onClick)
+           onClick();
     },[onClick]);
 
     return (
