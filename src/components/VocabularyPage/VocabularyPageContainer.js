@@ -17,8 +17,8 @@ const mapStateToProps = (state) =>{
 }
 
 const VocabularyPageContainer = compose(
+    withAuthorization('/vocabulary'),
     withAdminRights,
-    withAuthorization,
     connect(mapStateToProps,{postData, wordDataChanged,removeWord})
 )(VocabularyPage);
 

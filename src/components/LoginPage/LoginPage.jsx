@@ -5,7 +5,7 @@ import Row from "../Common/Row/Row";
 import LoginForm from "./LoginForm";
 import {SubmissionError} from "redux-form";
 
-const LoginPage =(props) => {
+const LoginPage = (props) => {
     const history = useHistory();
     const tryLogin = userData => {
         if(!props.loggedIn)
@@ -14,7 +14,7 @@ const LoginPage =(props) => {
                     throw new SubmissionError(result.errors)
             });
         else
-            history.push('./menuPage')
+            history.push(props.nextPage || './menuPage')
     }
 
     const changeUser = () =>{

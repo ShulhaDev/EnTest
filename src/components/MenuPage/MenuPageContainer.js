@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     }
 }
 const MenuPageContainer = compose(
-    withAuthorization,
+    withAuthorization('/menuPage'),
     connect(mapStateToProps,null)
     )(MenuPage);
 export default  MenuPageContainer;

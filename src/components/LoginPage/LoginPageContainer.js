@@ -5,9 +5,10 @@ import {clearTests} from "../../redux/reducers/vocabulary-reducer";
 import {getLoggedUser} from "../../redux/selectors/userSelectors";
 
 
-let mapStateToProps = (state) => {
+let mapStateToProps = (state,ownProps) => {
     return {
-        loggedIn: getLoggedUser(state)
+        loggedIn: getLoggedUser(state),
+        nextPage: ownProps.nextPage
     };
 }
 

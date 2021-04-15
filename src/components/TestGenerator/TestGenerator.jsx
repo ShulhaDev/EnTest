@@ -31,4 +31,4 @@ const TestGenerator = () => {
     );
 }
 
-export default withAuthorization(TestGenerator);
+export default withAuthorization('/testGenerator')(TestGenerator);

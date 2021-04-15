@@ -14,7 +14,7 @@ import EventSpongeContainer from "./components/Common/EventSponge/EventSpongeCon
 import TestSelectPageContainer from "./components/TestSelectPage/TestSelectPageContainer";
 import {info} from "./components/Common/EventSponge/EventSponge";
 
-const App = ({loggedIn,gotWords,gotTests,getWords,loadTests}) => {
+const App = ({loggedIn,gotWords,gotTests,getWords,loadTests,getCurrentUser}) => {
     useEffect(()=> {
         const manageUnhandledRejections = event => {
             //event.preventDefault();
@@ -23,6 +23,9 @@ const App = ({loggedIn,gotWords,gotTests,getWords,loadTests}) => {
         window.addEventListener("unhandledrejection", manageUnhandledRejections);
         return () => window.removeEventListener ('unhandledrejection',manageUnhandledRejections)
     },[])
+    useEffect (()=>{
+        getCurrentUser();
+    },[getCurrentUser])
     useEffect(()=>{
         if(!gotWords) {
             getWords();

@@ -19,7 +19,7 @@ const mapStateToProps = (state) =>{
 
 const TestPageContainer = compose(
     withTestData,
-    withAuthorization,
+    withAuthorization("/testPage"),
     connect(mapStateToProps,{setFromTestSelect})
 )(TestPage)
 export default  TestPageContainer;

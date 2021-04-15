@@ -13,7 +13,7 @@ const mapStateToProps = (state)=>{
 }
 
 const LearnPageContainer = compose(
-    withAuthorization,
+    withAuthorization('/learnPage'),
     connect(mapStateToProps,null)
 )(LearnPage);
 export default LearnPageContainer

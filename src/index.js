@@ -8,6 +8,7 @@ import App from "./App";
 import './fonts/whatever_it_takes_bold.ttf';
 import {BrowserRouter} from "react-router-dom";
 import {getWords, loadTests} from "./redux/reducers/vocabulary-reducer";
+import {getCurrentUser} from "./redux/reducers/user-reducer";
 
 const mapStateToProps = () => {
     return {
@@ -20,7 +21,7 @@ const mapStateToProps = () => {
 
 
 const AppContainer = connect(mapStateToProps,{
-    getWords , loadTests
+    getWords , loadTests, getCurrentUser
 })(App)
 
 ReactDOM.render(

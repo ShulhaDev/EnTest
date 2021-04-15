@@ -1,7 +1,7 @@
 import React from 'react'
-import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {getLoggedUser} from "../redux/selectors/userSelectors";
+import LoginPageContainer from "../components/LoginPage/LoginPageContainer";
 
 const mapStateToProps = (state,ownProps) => {
     return {
@@ -15,13 +15,14 @@ let Container = props => {
   if(props.loggedIn)
       return <CustomComponent />
   else{
-      return <Redirect to={"/loginPage"}/>
+      return <LoginPageContainer nextPage={props.nextPage}/>
+      // return <Redirect to={"/loginPage"}/>
   }
 }
 
 Container = connect(mapStateToProps,null)(Container);
 
- const withAuthorization = WrappedComponent => {
-    return () => <Container wrappedComponent ={WrappedComponent} />
+ const withAuthorization = (nextPage='') => WrappedComponent => {
+    return () => <Container nextPage={nextPage} wrappedComponent ={WrappedComponent} />
 }
 export default withAuthorization

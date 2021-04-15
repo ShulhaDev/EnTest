@@ -7,7 +7,7 @@ const ValidatedField = ({input,meta,inputName='input',...props}) => {
     const CustomTag = inputName;
     let fail = meta.touched && meta.error;
     return (
-        <div className={(fail || undefined) && styles.error}>
+        <div className={(fail || undefined) && styles.error} style={{display: "inline-flex"}}>
             <span>{fail && " ! "}</span>
             <CustomTag {...input} {...props} title={fail || ''}/>
         </div>
